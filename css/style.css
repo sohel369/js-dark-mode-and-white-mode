@@ -7,12 +7,12 @@
 
 section {
     position: relative;
-    background: #7e7373;
+    background: #031321;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background;
+    transition: background 0.4s;
 }
 
 section .card {
@@ -92,7 +92,7 @@ section .card .sci li a {
 }
 
 section .card .sci li a:hover {
-    color: white;
+    color: darkred;
 }
 
 section .card .sci li a .fa {
