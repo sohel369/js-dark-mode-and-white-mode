@@ -12,6 +12,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background;
 }
 
 section .card {
@@ -81,11 +82,67 @@ section .card .sci li a {
     position: relative;
     width: 50px;
     height: 50px;
-    background: #2e23d1;
+    background: #c6c4e0ad;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin: 0 10px;
+    transition: 0.4s;
+}
+
+section .card .sci li a:hover {
     color: white;
-    margin: 0 10px
+}
+
+section .card .sci li a .fa {
+    position: relative;
+    z-index: 1000;
+}
+
+section .card .sci li a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #534bbb;
+    border-radius: 50%;
+    transition: 0.2s;
+    transform: scale(0);
+}
+
+section .card .sci li a:hover:before {
+    transform: scale(1);
+}
+
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #dbb1b1ab;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle:before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: #1e9275;
+}
+
+section.dark .toggle:before {
+    content: '\f185';
+}
+
+section.dark {
+    background: #000;
+}
+
+section.dark .card {
+    background: #2b29297a;
 }
